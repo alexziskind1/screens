@@ -1,0 +1,12 @@
+<ScrollView>
+    <StackLayout>
+        <StackLayout *ngFor="let screen of screens" class="screen-tile">
+            <Label [text]="screen.title"></Label>
+
+            <StackLayout orientation="horizontal">
+                <Button text="edit" class="btn-screen-tile" (tap)="screenItemEditTap($event, screen)"></Button>
+                <Button text="view" class="btn-screen-tile" (tap)="screenItemViewTap($event, screen)"></Button>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ScrollView>

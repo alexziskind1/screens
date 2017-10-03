@@ -1,0 +1,43 @@
+<GridLayout class="designer">
+
+    <AbsoluteLayout #surface class="surface" (doubletap)="onDoubleClick($event)">
+        <Image *ngIf="currentScreen" [src]="currentScreen.imageUrl" draggable="false"></Image>
+
+        <Label #selection class="selection">
+        </Label>
+
+        <Label *ngFor="let link of allLinks$ | async" class="link" [class.selected]="isLinkSelected(link)" [style.height]="link.rect.size.height"
+            [style.width]="link.rect.size.width" [top]="link.rect.origin.y" [left]="link.rect.origin.x" (tap)="onLinkClick($event, link)">
+        </Label>
+    </AbsoluteLayout>
+
+
+    <GridLayout *ngIf="showScreenSelector" class="page-list-container">
+        <app-page-list [selectedValue]="selectedLinkScreenId" (screenSave)="onScreenSave($event)" (screenAssocDelete)="onScreenAssocDelete($event)"></app-page-list>
+    </GridLayout>
+
+
+</GridLayout>
+
+
+
+<!--div class="designer">
+    <div #surface class="surface" (dblclick)="onDoubleClick($event)">
+        <div *ngIf="currentScreen">
+            <img [src]="currentScreen.imageUrl" draggable="false" />
+        </div>
+
+        <div *ngIf="currentSelection" class="selection" [style.height.px]="currentSelection.height" [style.width.px]="currentSelection.width"
+            [style.top.px]="currentSelection.top" [style.left.px]="currentSelection.left" (click)="onSelectionClick($event)">
+        </div>
+    </div>
+
+    <div *ngIf="showScreenSelector" class="page-list-container">
+        <app-page-list [selectedValue]="selectedLinkScreenId" (screenSave)="onScreenSave($event)" (screenAssocDelete)="onScreenAssocDelete($event)"></app-page-list>
+    </div>
+
+    <div *ngFor="let link of allLinks$ | async" class="link" [class.selected]="isLinkSelected(link)" [style.height.px]="link.rect.size.height"
+        [style.width.px]="link.rect.size.width" [style.top.px]="link.rect.origin.y" [style.left.px]="link.rect.origin.x" (click)="onLinkClick($event, link)">
+    </div>
+
+</div-->

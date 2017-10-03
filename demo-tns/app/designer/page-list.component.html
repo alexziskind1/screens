@@ -1,0 +1,13 @@
+<GridLayout class="page-list-wrapper" rows="40 * 50">
+    <Label text="SELECT A SCREEN" row="0"></Label>
+    <ScrollView row="1">
+        <StackLayout>
+            <Label *ngFor="let page of pages" class="page-list-item" [class.selected]="isPageSelected(page)" [text]="page.title" (tap)="onScreenSelected(page)"></Label>
+        </StackLayout>
+    </ScrollView>
+
+    <StackLayout *ngIf="selectedValue" orientation="horizontal" row="2">
+        <Button class="page-list-btn" (tap)="onSaveTap($event)" text="Save"></Button>
+        <Button class="page-list-btn" (tap)="onDeleteTap($event)" text="Delete"></Button>
+    </StackLayout>
+</GridLayout>

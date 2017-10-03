@@ -1,0 +1,12 @@
+.screen-tile {
+    width: 100%;
+    height: 60;
+    background-color: #efefef;
+    border-width: 1;
+    border-color: #aaaaaa;
+    margin: 8;
+    padding: 5;
+}
+.btn-screen-tile {
+    margin-right: 8;
+}

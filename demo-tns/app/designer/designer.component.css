@@ -1,0 +1,33 @@
+.designer {
+    /*position: relative;*/
+}
+
+.surface {
+    /*position: relative;*/
+    background-color: #B5F5DA;
+}
+
+.selection {
+    /*position: absolute;*/
+    background-color: red;
+    opacity: 0.5;
+}
+
+.page-list-container {
+    /*position: fixed;
+    top: 0;
+    left: 0;*/
+    background-color: #E4E4E6;
+    width: 80%;
+    height:500;
+}
+
+.link {
+    position: absolute;
+    background-color: blue;
+    opacity: 0.5;
+}
+
+.link.selected {
+    background-color: green;
+}

@@ -1,0 +1,18 @@
+.page-list-wrapper {
+    margin: 8;
+    animation-name: fadein;
+    animation-duration: 500ms;
+}
+.page-list-item {
+    margin: 8;
+}
+.page-list-btn {
+    margin: 8;
+}
+.selected {
+    color: red;
+}
+@keyframes fadein {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}

@@ -1,0 +1,19 @@
+.page {
+    background-color: white;
+}
+
+.viewer-surface {
+    background-color: #B5F5DA;
+}
+
+.link {
+    background-color: blue;
+    opacity: 0;
+    animation-name: flash;
+    animation-duration: 800ms;
+}
+
+@keyframes flash {
+    0% { opacity: 0.5 }
+    100% { opacity: 0 }
+}

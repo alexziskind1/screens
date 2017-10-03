@@ -1,0 +1,10 @@
+<GridLayout class="page">
+    <AbsoluteLayout #surface class="viewer-surface" (tap)="onImageTap($event, surface)" (doubletap)="onDoubleTap($event)">
+        <Image *ngIf="currentScreen" [src]="currentScreen.imageUrl" stretch="aspectFit" draggable="false"></Image>
+
+        <Label *ngFor="let link of allLinks$ | async" class="" [style.height]="link.rect.size.height" [style.width]="link.rect.size.width"
+            [top]="link.rect.origin.y" [left]="link.rect.origin.x" (tap)="onLinkTap($event, link)">
+            </Label>
+
+    </AbsoluteLayout>
+</GridLayout>

@@ -1,0 +1,16 @@
+<GridLayout class="page" rows="*, 100">
+
+    <ScrollView>
+        <StackLayout row="0" class="screen-list-container">
+            <app-screen-list (screenEditSelect)="onScreenEditSelect($event)" (screenViewSelect)="onScreenViewSelect($event)"></app-screen-list>
+        </StackLayout>
+    </ScrollView>
+
+    <StackLayout row="1">
+        <button (tap)="onViewTap($event)" text="View"></button>
+
+        <button (tap)="onAddTap($event)" text="Add"></button>
+
+        <button (tap)="onRemoveAllLinksTap($event)" text="Remove All Links"></button>
+    </StackLayout>
+</GridLayout>
